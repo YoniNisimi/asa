@@ -1,0 +1,121 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MyMaster.master.cs" Inherits="MyMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .logo {
+            height: 50px;
+            width: 50px;
+        }
+
+        .img {
+            height: 85%;
+            width: 85%;
+            display: block;
+            margin: auto;
+        }
+
+        .imgjum {
+            height: 40%;
+            width: 40%;
+            display: block;
+            margin: auto;
+        }
+
+        h3, h2{
+            text-align: center;
+        }
+
+        h4{
+            text-align: center;
+            color: cornflowerblue;
+        }
+
+        .middle {
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            color:darkblue;
+        }
+
+        .text {
+            border: groove;
+            width: 200px;
+            height: 30px;
+            border-color: royalblue;
+        }
+
+        table {
+            align-items: center;
+        }
+
+        .payment {
+            width: 10%;
+            margin: 0 auto;
+            text-align:center;
+        }
+        #offer{
+             text-align: center;
+            color: cornflowerblue;
+        }
+
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Yoni&Tomer Home Decor</a>
+                        <img src="images/logo2.png" class="logo" />
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="Default.aspx">Home</a></li>
+                            <li><a href="Payment.aspx">Payment</a></li>
+                            <li><a href="InsertNewProduct.aspx">Insert New Product</a></li>
+                            <li><a href="Cart.aspx">Cart</a></li>
+                        </ul>
+
+                        <%--                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                    </ul>--%>
+                    </div>
+                </div>
+            </nav>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="modal-footer">
+                <footer>
+                    <div class="container">
+                        <p class="m-0 text-center text-white">
+                            Copyright &copy; Yoni&Tomer Home Decor 2017
+                        <img class="logo" src="images/logo2.png" />
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
